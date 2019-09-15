@@ -1,4 +1,4 @@
-Chat System Test task
+Chat Service
 =====================
 
 REQUIREMENTS
