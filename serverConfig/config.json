@@ -1,0 +1,7 @@
+{
+	"development": {
+		"jwtShaKey": "SECRET_KEY",
+		"passwordHashKey": "PASS_KEY",
+		"port": 3001
+	}
+}

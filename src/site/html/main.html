@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src='/js/vue.js'></script>
+		<script type="text/javascript" src='/js/main.js'></script>
+	</head>
+	<body>
+		<div id='auth-form' v-show='seen'>
+			<form onsubmit="return false">
+				<input type="text" v-model='login'>
+				<input type="password" v-model='password'>
+				<button v-on:click="signUp">SIGNUP</button>
+			</form>
+		</div>
+
+		<div id='chat' v-show='seen' style="height:300px;overflow-y: auto; border-style: solid">
+			<ol style="list-style-type: none">
+				<li v-for='message in messages'>
+					<span style="color: blue">{{ message.user }}</span>
+					<span>{{ message.text }}</span>
+				</li>
+			</ol>
+		</div>
+
+		<div id='chat-write' v-show='seen'>
+			<form onsubmit="return false">
+				<input v-model='message' type="text">
+				<button v-on:click="postMessage">SEND</button>
+			</form>
+		</div>
+		<div id='buttons' v-show='seen'>
+			<button v-on:click="logOut">Log Out</button>
+			<button v-on:click="getAllMessages">Get all messages</button>
+		</div>
+	</body>
+</html>
